@@ -7,6 +7,14 @@ const connection = createPool({
     password: DB_PASSWORD,
     database: DB_DATABASE,
     port: DB_PORT,
+});
+
+connection.getConnection((err) => {
+    if (err) {
+        console.error('Error connection database ', err);
+        return;
+    }
+    console.log('Connection Successful')
 })
 
 module.exports = connection;
