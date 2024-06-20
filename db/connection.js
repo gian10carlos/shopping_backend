@@ -1,4 +1,4 @@
-const { DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE, DB_PORT } = require('./config');
+const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT } = require('./config');
 const { createPool } = require('mysql2');
 
 const connection = createPool({
