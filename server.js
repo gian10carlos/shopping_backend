@@ -1,11 +1,11 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const router = require('./lib/routes/route.js')
+const { PORT } = require('./db/config.js')
 
 const app = express();
 
-const PORT = 3000;
-const SERVERNAME = '127.0.0.1';
+const SERVERNAME = 'localhost';
 
 app.use(cookieParser());
 app.use('/api', router);
